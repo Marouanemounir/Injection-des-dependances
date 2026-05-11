@@ -24,7 +24,7 @@ DaoImpl dao = new DaoImpl();
 MetierImpl metier = new MetierImpl(dao);
 System.out.println("Résultat = " + metier.calcul());
 ```
-*[Insérer Capture Console : Résultat Statique]*
+
 
 ### 2. Par Instanciation Dynamique (Version 2)
 On utilise un fichier `config.txt` contenant les noms des classes. L'API `Reflection` de Java (`Class.forName()`) nous permet d'instancier les objets dynamiquement à l'exécution sans toucher au code principal.
@@ -33,7 +33,7 @@ Scanner scanner = new Scanner(new File("config.txt"));
 String daoClassName = scanner.nextLine();
 // ... Instanciation avec Class.forName(daoClassName).newInstance()
 ```
-*[Insérer Capture Console : Résultat Dynamique]*
+
 
 ### 3. Par Framework Spring : Version XML
 Configuration via un fichier `config.xml` où l'on déclare nos Beans. Spring se charge de l'injection.
@@ -47,7 +47,7 @@ Configuration via un fichier `config.xml` où l'on déclare nos Beans. Spring se
 ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
 IMetier metier = (IMetier) context.getBean("metier");
 ```
-*[Insérer Capture Console : Résultat Spring XML]*
+
 
 ### 4. Par Framework Spring : Version Annotations
 L'injection se fait en utilisant les annotations `@Component` et `@Autowired`. L`AnnotationConfigApplicationContext` scanne les packages spécifiés.
