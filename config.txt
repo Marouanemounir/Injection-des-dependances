@@ -1,0 +1,2 @@
+ma.enset.bdcc.ioc.dao.DaoImpl
+ma.enset.bdcc.ioc.metier.MetierImpl

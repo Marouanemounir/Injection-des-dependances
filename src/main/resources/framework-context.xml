@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="dao" class="ma.enset.bdcc.framework.test.DummyDaoImpl"/>
+    <bean id="metier" class="ma.enset.bdcc.framework.test.DummyMetierImpl">
+        <property name="dao" ref="dao"/>
+    </bean>
+</beans>
